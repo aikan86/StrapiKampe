@@ -1,12 +1,9 @@
-module.exports = [
-  "strapi::errors",
-  "strapi::security",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::logger",
-  "strapi::query",
-  "strapi::body",
-  'strapi::session',
-  "strapi::favicon",
-  "strapi::public",
-];
+   // Nell'array di middlewares, cerca la sezione CORS e modifica:
+   {
+     name: 'strapi::cors',
+     config: {
+       origin: ['http://localhost:3000', 'https://kampe-website.vercel.app'],
+       headers: '*',
+     },
+   },
+   
